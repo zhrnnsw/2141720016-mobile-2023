@@ -73,6 +73,8 @@ Mengistall dan menampilkan "Hello World" menggunakan Dart
 
     **Jawab**:
 
+     https://www.canva.com/design/DAFt3qN-Mpk/p7UFG52zy3_Zd6SH-15IdQ/edit?utm_content=DAFt3qN-Mpk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 
 Referensi:
 1. https://bamai.uma.ac.id/2022/09/07/flutter-kelebihan-dan-kekurangannya/
