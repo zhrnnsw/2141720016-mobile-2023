@@ -5,6 +5,7 @@ void main() {
   print(list2);
   print(list2.length);
 
+
   List<int?> list1 = [1, 2, null];
   print(list1);
   var list3 = [0, ...?list1];
@@ -26,4 +27,5 @@ void main() {
   var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
   assert(listOfStrings[1] == '#1');
   print(listOfStrings);
+  
 }
