@@ -262,7 +262,7 @@ Tindakan terakhir adalah memanggil metode getNext dari callback tombol tersebut.
 ```
 Simpan dan uji coba aplikasi sekarang. Aplikasi akan menghasilkan pasangan kata acak baru setiap kali Anda menekan tombol Next.
 
-<video src="img/Namer%20App%20-%20Google%20Chrome%202023-09-30%2016-34-03-1.mp4" controls title="Title"></video>
+![Alt text](img/Namer-App-Google-Chrome-2023-09-30-16-34-03.gif)
 
 ### **Memperindah Tampilan Aplikasi**
 
@@ -1077,4 +1077,4 @@ Inilah fungsi widget tersebut:
 - Yang tersisa sekarang adalah mengganti widget Placeholder dengan FavoritesPage. Dan selesai!
 
 ![Alt text](img/image-30.png)
-<video src="img/Namer%20App%20-%20Google%20Chrome%202023-09-30%2017-33-39.mp4" controls title="Title"></video>
+![Alt text](img/Namer-App-Google-Chrome-2023-09-30-17-33-39.gif)
