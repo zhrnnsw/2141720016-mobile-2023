@@ -9,8 +9,7 @@ Zahra Annisa Wahono
 - [Praktikum 2](#praktikum-2--membuat-repository-github-dan-laporan-praktikum)
 - [Praktikum 3](#praktikum-3--menerapkan-widget-dasar)
 - [Praktikum 4](#praktikum-4---menerapkan-widget-material-design-dan-ios-cupertino)
-- [Tugas Praktikum](#tugas-praktikum)
-  * [Sub-heading](#sub-heading-2)
+- [Tugas Praktikum](#tugas-praktikum--codelabs)
 
 
 ## **Praktikum 1 : Membuat Project Flutter Baru**
@@ -29,7 +28,7 @@ Kemudian buat folder sesuai style laporan praktikum yang Anda pilih. Disarankan 
 
 **Jawab:** 
 
-![Alt text](image.png)
+![Alt text](img/image-0.png)
 
 ### **Langkah 3**
 
@@ -37,7 +36,7 @@ Buat nama project flutter hello_world seperti berikut, lalu tekan Enter. Tunggu 
 
 **Jawab:** 
 
-![Alt text](image-1.png)
+![Alt text](img/image-1.png)
 
 ### **Langkah 4**
 
@@ -45,7 +44,7 @@ Jika sudah selesai proses pembuatan project baru, pastikan tampilan seperti beri
 
 **Jawab:** 
 
-![Alt text](image-2.png)
+![Alt text](img/image-2.png)
 
 ## **Praktikum 2 : Membuat Repository GitHub dan Laporan Praktikum**
 
@@ -65,7 +64,7 @@ Lalu klik tombol "Create repository" lalu akan tampil seperti gambar berikut.
 
 Saya melewati langkah ini karena sebelumnya telah membuat repository sesuai saran dosen
 
-![Alt text](image-3.png)
+![Alt text](img/image-3.png)
 
 ### **Langkah 3**
 
@@ -73,7 +72,7 @@ Kembali ke VS code, project flutter hello_world, buka terminal pada menu Termina
 
 **Jawab:** 
 
-![Alt text](image-4.png)
+![Alt text](img/image-4.png)
 git telah terinisialisasi dengan project 
 
 ### **Langkah 4**
@@ -82,7 +81,7 @@ Pilih menu Source Control di bagian kiri, lalu lakukan stages (+) pada file .git
 
 
 **Jawab:** 
-![Alt text](image-5.png)
+![Alt text](img/image-5.png)
 
 ### **Langkah 5**
 
@@ -90,7 +89,7 @@ Beri pesan commit "tambah gitignore" lalu klik Commit (✔)
 
 **Jawab:** 
 
-![Alt text](image-6.png)
+![Alt text](img/image-6.png)
 
 ### **Langkah 6**
 
@@ -98,7 +97,7 @@ Lakukan push dengan klik bagian menu titik tiga > Push
 
 **Jawab:** 
 
-![Alt text](image-7.png)
+![Alt text](img/image-7.png)
 
 ### **Langkah 7**
 
@@ -123,7 +122,7 @@ Lakukan hal yang sama pada file README.md mulai dari Langkah 4. Setelah berhasil
 
 **Jawab:** 
 
-![Alt text](image-8.png)
+![Alt text](img/image-8.png)
 
 ### **Langkah 10**
 
@@ -131,7 +130,7 @@ Lakukan push juga untuk semua file lainnya dengan pilih Stage All Changes. Beri 
 
 **Jawab:** 
 
-![Alt text](image-9.png)
+![Alt text](img/image-9.png)
 
 ### **Langkah 11**
 
@@ -139,7 +138,7 @@ Kembali ke VS Code, ubah platform di pojok kanan bawah ke emulator atau device a
 
 **Jawab:** 
 
-![Alt text](image-10.png)
+![Alt text](img/image-10.png)
 
 ### **Langkah 12**
 
@@ -147,7 +146,7 @@ Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam ap
 
 **Jawab:** 
 
-![Alt text](image-11.png)
+![Alt text](img/image-11.png)
 ???
 
 ## **Praktikum 3 : Menerapkan Widget Dasar**
@@ -170,27 +169,43 @@ class MyTextWidget extends StatelessWidget {
   }
 }
 ```
-Lakukan import file text_widget.dart ke main.dart, lalu ganti bagian text widget dengan kode di atas. Maka hasilnya seperti gambar berikut. Screenshot hasil milik Anda, lalu dibuat laporan pada file README.md.
+Lakukan import file text_widget.dart ke main.dart, lalu ganti bagian text widget dengan kode di atas. 
 
 **Jawab:** 
 
-![Alt text](image-12.png)
-???
+![Alt text](img/image-12.png)
+
 
 ### **Langkah 2: Image Widget**
 
 Buat sebuah file image_widget.dart di dalam folder basic_widgets dengan isi kode berikut.
+```
+import 'package:flutter/material.dart';
 
+class MyImageWidget extends StatelessWidget {
+  const MyImageWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Image(
+      image: AssetImage("logo_polinema.jpg")
+    );
+  }
+}
+```
 Lakukan penyesuaian asset pada file pubspec.yaml dan tambahkan file logo Anda di folder assets project hello_world.
-
+```
+flutter:
+  assets:
+     - logo_polinema.jpg
+```
 Sesuaikan kode dan import di file main.dart
 
 **Jawab:** 
 
-![Alt text](image-13.png)
-![Alt text](image-15.png)
-![Alt text](image-14.png)
-???
+![Alt text](img/image-13.png)
+![Alt text](img/image-15.png)
+![Alt text](img/image-14.png)
 
 
 ## **Praktikum 4 : : Menerapkan Widget Material Design dan iOS Cupertino**
@@ -218,6 +233,8 @@ return MaterialApp(
   
 **Jawab:** 
 
+![Alt text](img/image-16.png)
+
 ### **Langkah 2: Floating Action Button (FAB)**
 
 Button widget terdapat beberapa macam pada flutter yaitu ButtonBar, DropdownButton, TextButton, FloatingActionButton, IconButton, OutlineButton, PopupMenuButton, dan ElevatedButton.
@@ -237,16 +254,16 @@ return MaterialApp(
     );
 ```
 **Jawab:** 
-
+![Alt text](img/image-17.png)
 
 ### **Langkah 3: Scaffold Widget**
 
 Dialog widget pada flutter memiliki dua jenis dialog yaitu AlertDialog dan SimpleDialog.
 
 Ubah isi kode main.dart seperti berikut.
-
-import 'package:flutter/material.dart';
 ```
+import 'package:flutter/material.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -322,6 +339,8 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 **Jawab:** 
 
+![Alt text](img/image-20.png)
+
 ### **Langkah 4: Dialog Widget**
 
 Flutter menyediakan widget yang dapat menerima input dari pengguna aplikasi yaitu antara lain Checkbox, Date and Time Pickers, Radio Button, Slider, Switch, TextField.
@@ -387,6 +406,8 @@ showAlertDialog(BuildContext context) {
 ```
 **Jawab:** 
 
+![Alt text](img/Alert.gif) 
+
 ### **Langkah 5: Input dan Selection Widget**
 
 Flutter menyediakan widget yang dapat menerima input dari pengguna aplikasi yaitu antara lain Checkbox, Date and Time Pickers, Radio Button, Slider, Switch, TextField.
@@ -414,6 +435,8 @@ class MyApp extends StatelessWidget {
 }
 ```
 **Jawab:** 
+
+![Alt text](<img/Text Field.gif>)
 
 ### **Langkah 6: Date and Time Pickers**
 
@@ -494,3 +517,10 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 **Jawab:** 
+
+ ![Alt text](<img/Date Picker.gif>)
+
+## **Tugas Praktikum : Codelabs**
+
+[Namer App](https://github.com/zhrnnsw/2141720016-mobile-2023/tree/main/week-5/src/namer_app)
+
