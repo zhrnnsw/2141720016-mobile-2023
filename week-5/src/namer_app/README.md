@@ -1077,4 +1077,4 @@ Inilah fungsi widget tersebut:
 - Yang tersisa sekarang adalah mengganti widget Placeholder dengan FavoritesPage. Dan selesai!
 
 ![Alt text](img/image-30.png)
-![Alt text](img/Namer-App-Google-Chrome-2023-09-30-17-33-39.gif)
+![Alt text](Namer-App-Google-Chrome-2023-09-30-17-33-39.gif)
