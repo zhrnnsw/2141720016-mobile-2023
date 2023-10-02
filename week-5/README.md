@@ -520,6 +520,33 @@ class _MyHomePageState extends State<MyHomePage> {
 
  ![Alt text](<img/Date Picker.gif>)
 
+
+### **Membuat File Widget untuk Scaffold Widget, Dialog Widget, Input dan Selection Widget, dan Date and Time Pickers **
+
+*hello_world/lib*
+
+![Alt text](img/image-21.png)
+
+*lib/scaffold_widget.dart*
+
+![Alt text](img/image-22.png)
+
+*lib/text_field_widget.dart*
+
+![Alt text](img/image-23.png)
+
+*lib/alert_dialog_widget.dart*
+
+![Alt text](img/image-24.png)
+
+*lib/date_time_picker_widget.dart*
+
+![Alt text](img/image-25.png) 
+
+![Alt text](img/image-26.png)
+
+![Alt text](<img/praktikum4.gif>)
+
 ## **Tugas Praktikum : Codelabs**
 
 [Namer App](https://github.com/zhrnnsw/2141720016-mobile-2023/tree/main/week-5/src/namer_app)
