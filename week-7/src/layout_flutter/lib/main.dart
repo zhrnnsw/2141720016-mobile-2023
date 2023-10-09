@@ -51,7 +51,14 @@ class MyApp extends StatelessWidget {
         _buildButtonColumn(color, Icons.share, 'SHARE'),
       ],
     );
-
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'The Nyaru Menteng Orangutan Rescue and Rehabilitation Centre is located in Central Kalimantan and is run by the BOS Foundation. It opened in 1999 and is now the largest orangutan care centre in Indonesia. The aim at Nyaru Menteng is to care for and rehabilitate orphaned orangutans and prepare them for release into protected forest.'
+        ' Zahra Annisa Wahono - 2141720016',
+        softWrap: true,
+      ),
+    );
     return MaterialApp(
       title: 'Flutter layout: Zahra Annisa Wahono 2141720016',
       home: Scaffold(
@@ -62,10 +69,13 @@ class MyApp extends StatelessWidget {
           children: [
             titleSection,
             buttonSection,
+            textSection,
           ],
         ),
       ),
     );
+
+    
   }
 
   Column _buildButtonColumn(Color color, IconData icon, String label) {
