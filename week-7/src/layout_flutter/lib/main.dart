@@ -7,6 +7,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget imageSection = Expanded(
+      child: Image.asset("nyaru-menteng.png"),
+      );
     Widget titleSection = Container(
       padding: const EdgeInsets.all(16.0),
       child: Row(
@@ -20,14 +23,14 @@ class MyApp extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: const Text(
-                    'Wisata Gunung di Batu',
+                    'Borneo Orangutan Survival Foundation (BOSF) Nyaru Menteng',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Text(
-                  'Batu, Malang, Indonesia',
+                  'Komplek Arboretum Nyaru Menteng, Jl. Tjilik Riwut No.Km 28, Tumbang Tahai, Kec. Bukit Batu, Kota Palangka Raya, Kalimantan Tengah 73111',
                   style: TextStyle(color: Colors.grey),
                 ),
               ],
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
             Icons.star,
             color: const Color.fromARGB(255, 183, 60, 51),
           ),
-          const Text('41'),
+          const Text('8/10'),
         ],
       ),
     );
@@ -55,7 +58,7 @@ class MyApp extends StatelessWidget {
       padding: const EdgeInsets.all(32),
       child: const Text(
         'The Nyaru Menteng Orangutan Rescue and Rehabilitation Centre is located in Central Kalimantan and is run by the BOS Foundation. It opened in 1999 and is now the largest orangutan care centre in Indonesia. The aim at Nyaru Menteng is to care for and rehabilitate orphaned orangutans and prepare them for release into protected forest.'
-        ' Zahra Annisa Wahono - 2141720016',
+        'Zahra Annisa Wahono 2141720016',
         softWrap: true,
       ),
     );
@@ -67,6 +70,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
+            imageSection,
             titleSection,
             buttonSection,
             textSection,
