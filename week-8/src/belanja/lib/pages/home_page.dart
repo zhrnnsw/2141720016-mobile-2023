@@ -1,114 +1,57 @@
 import 'package:belanja/models/item.dart';
+import 'package:belanja/widgets/daftar_item_widget.dart';
+import 'package:belanja/widgets/footer_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   final List<Item> items = [
     Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
+        name: 'Rice',
+        price: 41400,
+        image: 'assets/images/rice.jpg',
+        stok: 8,
+        rating: 4.5),
     Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
+        name: 'Cotton Buds',
+        price: 7000,
+        image: 'assets/images/cotton_buds.jpg',
+        stok: 19,
+        rating: 4.3),
     Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
+        name: 'Shampoo',
+        price: 17000,
+        image: 'assets/images/shampoo.jpg',
+        stok: 12,
+        rating: 3.8),
     Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
+        name: 'Honey',
+        price: 19500,
+        image: 'assets/images/honey.jpg',
+        stok: 20,
+        rating: 4.7),
     Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
+        name: 'Tooth Brush',
+        price: 16500,
+        image: 'assets/images/tooth_brush.jpg',
+        stok: 26,
+        rating: 4.6),
     Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
-    Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
-    Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
-    Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
-    Item(
-      name: 'Sugar',
-      price: 5000,
-      image: 'assets/images/sugar.jpg',
-    ),
+        name: 'Bread',
+        price: 6000,
+        image: 'assets/images/bread.jpg',
+        stok: 54,
+        rating: 4.7),
+    
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: Key('home_page'),
       appBar: AppBar(
-        title: Text('Shopping List'),
-        actions: const <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text('Zahra Annisa W'),
-              Text('2141720016'),
-            ],
-          ),
-        ],
+        title: const Text('Shopping List'),
       ),
-      body: Container(
-        margin: EdgeInsets.all(8),
-        child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 200,
-              mainAxisExtent: 250,
-            ),
-            padding: EdgeInsets.all(8),
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              final item = items[index];
-              return InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, '/item', arguments: item);
-                },
-                child: Card(
-                  child: Container(
-                    margin: EdgeInsets.all(8),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Image.asset(item.image)
-                          ),
-                        Expanded(
-                          child: Text(item.name)
-                          ),
-                        Expanded(
-                            child: Text(
-                          item.price.toString(),
-                          textAlign: TextAlign.end,
-                        ))
-                      ],
-                    ),
-                  ),
-                ),
-              );
-            }),
-      ),
+      body: ItemGrid(items: items),
+      bottomNavigationBar: FooterWidget()
     );
   }
 }

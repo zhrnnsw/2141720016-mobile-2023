@@ -7,11 +7,8 @@ void main() {
   runApp(MaterialApp(
     initialRoute: '/',
       routes: {
-        '/':(context) => HomePage(),
-        '/item':(context) {
-          final item = ModalRoute.of(context)!.settings.arguments as Item;
-          return ItemPage(item: item);
-        }
+        '/': (context) => HomePage(),
+      '/item': (context) => const ItemPage(),
       },
   ));
 }
