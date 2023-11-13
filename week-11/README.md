@@ -175,3 +175,13 @@ Pesan progres yang ditempatkan di bagian bawah layar akan menunjukkan informasi 
 
 
 # **Tugas Praktikum 3: State di Multiple Screens**
+
+<img src="img/praktikum3.gif">
+
+<img src="img/image.png">
+
+ Aplikasi memiliki dua layar utama, satu untuk membuat rencana (PlanCreatorScreen) dan yang lainnya untuk melihat rencana (PlanScreen).
+
+Bagian kiri diagram, dimulai dari "MaterialApp", menunjukkan bagaimana sistem bergerak dari layar pembuat rencana ("PlanCreatorScreen") dengan berbagai elemen seperti "Column", "TextField", dan "ListView". Bagian kanan diagram, dimulai dari "MaterialApp" juga, menunjukkan struktur layar untuk melihat rencana ("PlanScreen") dengan komponen-komponen seperti "Scaffold", "Column", "Expanded", "SafeArea", "ListView", dan "Text".
+
+
