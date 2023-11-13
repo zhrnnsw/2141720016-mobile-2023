@@ -1,6 +1,6 @@
 # **Tugas Praktikum 1 - Dasar State dengan Model-View**
 
-![Alt text](img\praktikum1_2.gif) 
+![Alt text](/img/praktikum1_2.gif) 
 
 **Langkah 4: Buat file data_layer.dart**
 
@@ -83,14 +83,15 @@ Dari langkah 8, kita butuh ListTile untuk menampilkan setiap nilai dari plan.tas
   }
 
  ``` 
-![Alt text](img\praktikum1.gif) 
+
+![Alt text](/img/praktikum1.gif) 
 
 Langkah 9 ini menunjukkan pembuatan fungsi _buildTaskTile digunakan untuk membuat tampilan dinamis untuk setiap tugas dalam plan.tasks. Ini memperlihatkan kotak centang untuk status tugas (selesai/belum selesai) dan kotak teks untuk mengedit deskripsi tugas. Ketika ada perubahan pada salah satu dari itu, setState dipanggil untuk memperbarui plan dengan perubahan yang dilakukan pada tugas tertentu. Ini memungkinkan pengguna untuk mengubah dan menyimpan perubahan langsung dari antarmuka pengguna.
 
 **Langkah 11: Tambah Scroll Listener**
 
 Tambahkan method initState() setelah deklarasi variabel scrollController seperti kode berikut.
-
+```
 @override
 void initState() {
   super.initState();
@@ -99,16 +100,17 @@ void initState() {
       FocusScope.of(context).requestFocus(FocusNode());
     });
 }
+```
 
 **Langkah 13: Terakhir, tambah method dispose()**
 Terakhir, tambahkan method dispose() berguna ketika widget sudah tidak digunakan lagi.
-
+```
 @override
 void dispose() {
   scrollController.dispose();
   super.dispose();
 }
-
+```
 initState() digunakan untuk inisialisasi, disini digunakan untuk mengatur perilaku scrollController saat widget pertama kali dibuat.
 
 dispose() dipanggil saat widget tidak diperlukan lagi, digunakan untuk membersihkan sumber daya yang tidak diperlukan, seperti dalam kasus ini, membersihkan scrollController.
