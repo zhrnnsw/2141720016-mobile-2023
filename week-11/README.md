@@ -119,6 +119,59 @@ Kedua method ini, baik initState() maupun dispose(), adalah bagian dari siklus h
 
 # **Tugas Praktikum 2: InheritedWidget**
 
+<img src="img/praktikum2.gif"> 
+
+**Langkah 1: Buat file plan_provider.dart**
+
+Buat folder baru provider di dalam folder lib, lalu buat file baru dengan nama plan_provider.dart berisi kode seperti berikut.
+
+```
+import 'package:flutter/material.dart';
+import '../models/data_layer.dart';
+
+class PlanProvider extends InheritedNotifier<ValueNotifier<Plan>> {
+  const PlanProvider({super.key, required Widget child, required
+   ValueNotifier<Plan> notifier})
+  : super(child: child, notifier: notifier);
+
+  static ValueNotifier<Plan> of(BuildContext context) {
+   return context.
+    dependOnInheritedWidgetOfExactType<PlanProvider>()!.notifier!;
+  }
+}
+
+```
+
+Pada langkah 1, "InheritedWidget" digunakan sebagai superclass dari "PlanProvider". InheritedWidget adalah bagian dari Flutter yang memungkinkan data untuk diwariskan ke widget di dalam pohon widget tanpa perlu melewati data secara langsung melalui konstruktor widget. Ini berguna dalam situasi di mana beberapa widget di dalam subtree perlu mengakses data yang sama.
+
+Di dalam kode yang diberikan, "PlanProvider" mewarisi "InheritedNotifier" yang pada dasarnya adalah turunan dari "InheritedWidget". "InheritedNotifier" adalah variasi dari "InheritedWidget" yang berisi Notifier (dalam hal ini, "ValueNotifier<Plan>"). Notifier ini digunakan untuk memberitahukan widget-widget yang menggunakan "PlanProvider" tentang perubahan pada objek "Plan".
+
+Dalam hal ini, "ValueNotifier" digunakan karena ia adalah jenis notifikasi yang dapat memberitahukan widget-widget yang menggunakan "PlanProvider" ketika terjadi perubahan pada objek "Plan". Saat terjadi perubahan pada nilai "Plan", "ValueNotifier" akan memberi tahu semua widget yang bergantung pada data tersebut sehingga mereka dapat memperbarui tampilan mereka.
+
+Dengan struktur tersebut, widget-widget di bawah subtree "PlanProvider" akan dapat mengakses nilai "Plan" tanpa perlu memasukkannya secara langsung ke setiap widget yang membutuhkannya. Mereka cukup menggunakan method static "of" yang didefinisikan dalam "PlanProvider" untuk mengakses notifikasi perubahan pada "Plan".
+
+**Langkah 3: Tambah method pada model plan.dart**
+
+Tambahkan dua method di dalam model class Plan seperti kode berikut.
+```
+int get completedCount => tasks
+  .where((task) => task.complete)
+  .length;
+
+String get completenessMessage =>
+  '$completedCount out of ${tasks.length} task
+```
+Langkah 3 menambahkan dua metode ke dalam kelas model Plan:
+
+`completedCount`: Menghitung berapa banyak tugas yang sudah diselesaikan dari daftar tugas.
+
+`completenessMessage`: Memberikan pesan yang menunjukkan jumlah tugas yang sudah diselesaikan dari total tugas yang ada.
+
+Kedua metode ini memberikan informasi tentang kemajuan tugas, memudahkan untuk melacak seberapa banyak yang sudah selesai dari total tugas yang ada.
+
+<img src="img/praktikum2.gif">
+
+Pesan progres yang ditempatkan di bagian bawah layar akan menunjukkan informasi mengenai progres tugas dalam bentuk "0 out of 1 tasks" (dengan nilai yang disesuaikan sesuai dengan tugas yang telah diselesaikan dan total tugas yang ada). Hal ini memudahkan pengguna untuk melihat seberapa banyak tugas yang telah diselesaikan dari total tugas yang ada dalam aplikasi Master Plan.
 
 
 # **Tugas Praktikum 3: State di Multiple Screens**
