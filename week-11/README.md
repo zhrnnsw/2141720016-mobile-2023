@@ -1,6 +1,6 @@
 # **Tugas Praktikum 1 - Dasar State dengan Model-View**
 
-![Alt text](/img/praktikum1_2.gif) 
+<img src="img/praktikum1_2.gif">  
 
 **Langkah 4: Buat file data_layer.dart**
 
@@ -84,7 +84,7 @@ Dari langkah 8, kita butuh ListTile untuk menampilkan setiap nilai dari plan.tas
 
  ``` 
 
-![Alt text](/img/praktikum1.gif) 
+<img src="img/praktikum1.gif"> 
 
 Langkah 9 ini menunjukkan pembuatan fungsi _buildTaskTile digunakan untuk membuat tampilan dinamis untuk setiap tugas dalam plan.tasks. Ini memperlihatkan kotak centang untuk status tugas (selesai/belum selesai) dan kotak teks untuk mengedit deskripsi tugas. Ketika ada perubahan pada salah satu dari itu, setState dipanggil untuk memperbarui plan dengan perubahan yang dilakukan pada tugas tertentu. Ini memungkinkan pengguna untuk mengubah dan menyimpan perubahan langsung dari antarmuka pengguna.
 
