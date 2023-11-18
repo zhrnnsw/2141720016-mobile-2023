@@ -120,4 +120,6 @@ Langkah 2, 5, dan 6 berkaitan dengan penanganan operasi asinkron menggunakan Com
 
 <img src="img/praktikum3_2.gif">
 
+**Soal 7** Capture hasil praktikum Anda berupa GIF
 
+<img src="img/praktikum4.gif">
