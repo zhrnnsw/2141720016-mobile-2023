@@ -206,4 +206,24 @@ Penggunaan FutureBuilder membantu menyederhanakan dan membersihkan kode, terutam
 
 Tidak ada perbedaan dari segi UI namun jika terjadi error saat pengambilan data lokasi, maka akan mucul peringatannya
 
+# **Praktikum 8: Navigation route dengan Future Function**
 
+**Soal 15** Tambahkan nama panggilan Anda pada tiap properti title
+
+```
+Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: color,
+      appBar: AppBar(
+        title: const Text('Navigation First Screen - Zahra'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+            child: const Text('Change Color'),
+            onPressed: () {
+              _navigateAndGetColor(context);
+            }),
+      ),
+    );
+  }
+```
