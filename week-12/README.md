@@ -189,8 +189,14 @@ Metode returnError() berfungsi sebagai future yang secara sengaja memicu kesalah
 
 Bisa, karena saya menggunakan dependensi geolocator : ^10.1 yang secara otomatis akan menambahkan paket geolocator_web yang mendukung geolokasi di browser
 
-
-
 <img src="img/praktikum6_2.gif">
 
+
+# **Praktikum 7: Manajemen Future dengan FutureBuilder**
+
+<img src="img/praktikum7.gif">
+
+**Soal 13** Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+
+Penggunaan FutureBuilder membantu menyederhanakan dan membersihkan kode, terutama ketika bekerja dengan operasi asinkron. Ini membantu meningkatkan keterbacaan kode, mengurangi boilerplate, dan menyediakan cara yang lebih terstruktur untuk menangani state dan kondisi UI
 
