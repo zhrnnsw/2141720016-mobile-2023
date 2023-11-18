@@ -200,3 +200,6 @@ Bisa, karena saya menggunakan dependensi geolocator : ^10.1 yang secara otomatis
 
 Penggunaan FutureBuilder membantu menyederhanakan dan membersihkan kode, terutama ketika bekerja dengan operasi asinkron. Ini membantu meningkatkan keterbacaan kode, mengurangi boilerplate, dan menyediakan cara yang lebih terstruktur untuk menangani state dan kondisi UI
 
+**Soal 14**
+
+<img src="img/praktikum7.gif">
