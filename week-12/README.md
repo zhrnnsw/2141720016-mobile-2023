@@ -227,3 +227,12 @@ Widget build(BuildContext context) {
     );
   }
 ```
+**Soal 16** Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ? Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+
+<img src="img/praktikum8.gif">
+
+Setelah me ngeklik Change Color maka kita diarahkan ke NavigationSecond. Setiap kali tombol di layar NavigationSecond, variabel color diatur sesuai dengan warna yang sesuai dengan tombol yang diklik . Setelah itu, menggunakan Navigator.pop(context, color), warna tersebut dikirim kembali ke layar NavigationFirst.
+
+Ketika kita kembali ke NavigationFirst, warna yang dikirim kembali digunakan untuk mengatur warna latar belakang layar (backgroundColor: color). 
+
+<img src="img/praktikum8_2.gif">
