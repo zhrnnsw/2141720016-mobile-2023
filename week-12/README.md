@@ -200,6 +200,10 @@ Bisa, karena saya menggunakan dependensi geolocator : ^10.1 yang secara otomatis
 
 Penggunaan FutureBuilder membantu menyederhanakan dan membersihkan kode, terutama ketika bekerja dengan operasi asinkron. Ini membantu meningkatkan keterbacaan kode, mengurangi boilerplate, dan menyediakan cara yang lebih terstruktur untuk menangani state dan kondisi UI
 
-**Soal 14**
+**Soal 14** Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
 
 <img src="img/praktikum7.gif">
+
+Tidak ada perbedaan dari segi UI namun jika terjadi error saat pengambilan data lokasi, maka akan mucul peringatannya
+
+
