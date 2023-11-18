@@ -164,3 +164,33 @@ Future returnError() async {
   }
 ```
 Metode returnError() berfungsi sebagai future yang secara sengaja memicu kesalahan setelah menunggu selama 2 detik sebagai bagian dari simulasi operasi. Sebaliknya, metode handleError() berusaha mengeksekusi returnError() dalam blok try-catch; jika returnError() menghasilkan kesalahan, blok catch akan menangkapnya dan memperbarui state widget dengan pesan kesalahan. Blok finally pada handleError() selalu dijalankan setelah blok try atau catch, independen dari terjadinya kesalahan. Dengan demikian, tujuan dari returnError() adalah menyimulasikan kondisi kesalahan, sedangkan handleError() lebih berfokus pada penanganan kesalahan yang mungkin terjadi dan pelaksanaan tindakan tertentu setelah operasi selesai.
+
+# **Praktikum 6: Menggunakan Future dengan StatefulWidget**
+
+**Soal 11** Tambahkan nama panggilan Anda pada tiap properti title
+```
+ @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(
+        title: Text('Current Location - Zahra'),
+      ),
+      body: Center(
+        child: Text(myPosition),
+      ),
+    );
+  }
+  ```
+<img src="img/praktikum6.gif">
+
+**Soal 12** Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+
+<img src="img/praktikum6_3.gif">
+
+Bisa, karena saya menggunakan dependensi geolocator : ^10.1 yang secara otomatis akan menambahkan paket geolocator_web yang mendukung geolokasi di browser
+
+
+
+<img src="img/praktikum6_2.gif">
+
+
