@@ -123,3 +123,9 @@ Langkah 2, 5, dan 6 berkaitan dengan penanganan operasi asinkron menggunakan Com
 **Soal 7** Capture hasil praktikum Anda berupa GIF
 
 <img src="img/praktikum4.gif">
+
+**Soal 8** Jelaskan maksud perbedaan kode langkah 1 dan 4!
+
+Langkah 1 menggunakan pendekatan FutureGroup untuk menangani sejumlah future secara bersamaan. Dalam kasus ini, tiga fungsi asinkron (returnOneAsync(), returnTwoAsync(), dan returnThreeAsync()) ditambahkan ke dalam FutureGroup, dan kemudian futureGroup.close() digunakan untuk menutup grup tersebut. Metode then pada futureGroup.future kemudian digunakan untuk menangani hasilnya ketika semua future selesai dieksekusi, menjumlahkan nilai-nilai yang dihasilkan dan memperbarui state widget.
+
+Sementara itu, langkah 4 menggunakan pendekatan Future.wait, yang menyederhanakan proses menunggu sejumlah future menjadi satu future tunggal (futures). Dalam hal ini, kode membuat List dari future-future yang diberikan dan menunggu sampai semua future tersebut selesai. Ketika semuanya selesai, nilai-nilai hasilnya dikumpulkan dalam bentuk List dan diakses melalui then. Meskipun pendekatan ini lebih ringkas, keduanya pada dasarnya mencapai tujuan yang sama: menangani sejumlah future secara bersamaan dan menanggapi hasilnya setelah semuanya selesai dieksekusi.
