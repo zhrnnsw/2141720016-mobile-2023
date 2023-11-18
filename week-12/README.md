@@ -129,3 +129,12 @@ Langkah 2, 5, dan 6 berkaitan dengan penanganan operasi asinkron menggunakan Com
 Langkah 1 menggunakan pendekatan FutureGroup untuk menangani sejumlah future secara bersamaan. Dalam kasus ini, tiga fungsi asinkron (returnOneAsync(), returnTwoAsync(), dan returnThreeAsync()) ditambahkan ke dalam FutureGroup, dan kemudian futureGroup.close() digunakan untuk menutup grup tersebut. Metode then pada futureGroup.future kemudian digunakan untuk menangani hasilnya ketika semua future selesai dieksekusi, menjumlahkan nilai-nilai yang dihasilkan dan memperbarui state widget.
 
 Sementara itu, langkah 4 menggunakan pendekatan Future.wait, yang menyederhanakan proses menunggu sejumlah future menjadi satu future tunggal (futures). Dalam hal ini, kode membuat List dari future-future yang diberikan dan menunggu sampai semua future tersebut selesai. Ketika semuanya selesai, nilai-nilai hasilnya dikumpulkan dalam bentuk List dan diakses melalui then. Meskipun pendekatan ini lebih ringkas, keduanya pada dasarnya mencapai tujuan yang sama: menangani sejumlah future secara bersamaan dan menanggapi hasilnya setelah semuanya selesai dieksekusi.
+
+# **Praktikum 5: Menangani Respon Error pada Async Code**
+
+**Soal 9** Capture hasil praktikum
+
+<img src="img/praktikum5.gif">
+
+<img src="img/image-2.png">
+
