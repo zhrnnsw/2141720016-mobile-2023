@@ -236,3 +236,12 @@ Setelah me ngeklik Change Color maka kita diarahkan ke NavigationSecond. Setiap 
 Ketika kita kembali ke NavigationFirst, warna yang dikirim kembali digunakan untuk mengatur warna latar belakang layar (backgroundColor: color). 
 
 <img src="img/praktikum8_2.gif">
+
+
+# **Praktikum 9: Memanfaatkan async/await dengan Widget Dialog**
+
+**Soal 17** Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ? Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+
+Ketika kita klik tombol "Change Color" di layar NavigationDialogScreen, dialog muncul meminta kita untuk memilih warna. Setelah memilih warna dan menutup dialog, warna latar belakang layar seharusnya berubah, tapi pada kode yang diberikan, pembaruan warna tidak terjadi karena dalam fungsi _showColordialog, pemanggilan setState menggunakan nilai yang sama seperti sebelumnya (color = color). Untuk memperbaikinya, kita perlu menyimpan nilai warna yang dipilih dari dialog dan menggunakan nilai itu dalam pemanggilan setState untuk memastikan pembaruan warna yang benar setelah memilih warna dari dialog.
+
+<img src="img/praktikum9.gif">
