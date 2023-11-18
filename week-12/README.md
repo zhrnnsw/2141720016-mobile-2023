@@ -57,3 +57,30 @@ Pada langkah kedua, metode count() ini digunakan untuk menggambarkan penggunaan 
 
 <img src="img/praktikum2.gif">
 
+# **Praktikum 3: Menggunakan Completer di Future**
+
+**Langkah 2: Tambahkan variabel dan method**
+Tambahkan variabel late dan method di class _FuturePageState seperti ini.
+
+```
+late Completer completer;
+
+Future getNumber() {
+  completer = Completer<int>();
+  calculate();
+  return completer.future;
+}
+
+Future calculate() async {
+  await Future.delayed(const Duration(seconds : 5));
+  completer.complete(42);
+}
+```
+
+Langkah dua mendefinisikan variabel completer dan dua metode, yaitu getNumber() dan calculate(), dalam class _FuturePageState. completer digunakan sebagai objek Completer, yang memungkinkan pembuatan nilai Future secara manual. Metode getNumber() menginisialisasi completer, memanggil metode calculate() yang mensimulasikan operasi yang memakan waktu, dan mengembalikan completer.future. Dengan ini, saat operasi selesai, completer.complete(42) dipanggil, dan nilai 42 dapat diakses melalui completer.future. Langkah-langkah tersebut menciptakan mekanisme untuk menghasilkan nilai asinkron setelah suatu operasi selesai, dan Completer digunakan untuk mengelola alur eksekusi dan nilai Future.
+
+<img src="img/praktikum3.gif">
+
+
+
+
