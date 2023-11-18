@@ -138,3 +138,29 @@ Sementara itu, langkah 4 menggunakan pendekatan Future.wait, yang menyederhanaka
 
 <img src="img/image-2.png">
 
+
+**Soal 10** Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+
+<img src="img/praktikum5_2.gif">
+```
+Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+  }
+```
+
+```
+  Future handleError() async{
+    try{
+      await returnError();
+    }catch(error){
+      setState(() {
+        result = error.toString();
+      });
+    }
+    finally{
+      print('Complete');
+    }
+  }
+```
+Metode returnError() berfungsi sebagai future yang secara sengaja memicu kesalahan setelah menunggu selama 2 detik sebagai bagian dari simulasi operasi. Sebaliknya, metode handleError() berusaha mengeksekusi returnError() dalam blok try-catch; jika returnError() menghasilkan kesalahan, blok catch akan menangkapnya dan memperbarui state widget dengan pesan kesalahan. Blok finally pada handleError() selalu dijalankan setelah blok try atau catch, independen dari terjadinya kesalahan. Dengan demikian, tujuan dari returnError() adalah menyimulasikan kondisi kesalahan, sedangkan handleError() lebih berfokus pada penanganan kesalahan yang mungkin terjadi dan pelaksanaan tindakan tertentu setelah operasi selesai.

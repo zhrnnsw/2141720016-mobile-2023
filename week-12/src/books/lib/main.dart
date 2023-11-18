@@ -118,6 +118,19 @@ class _FuturePageState extends State<FuturePage> {
     throw Exception('Something terrible happened!');
   }
 
+  Future handleError() async{
+    try{
+      await returnError();
+    }catch(error){
+      setState(() {
+        result = error.toString();
+      });
+    }
+    finally{
+      print('Complete');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -134,7 +147,7 @@ class _FuturePageState extends State<FuturePage> {
                     : null,
                 child: const Text('GO!'),
                 onPressed: () {
-                  returnError().then((value) {
+                  handleError().then((value) {
                     setState(() {
                       result = 'Success';
                     });
