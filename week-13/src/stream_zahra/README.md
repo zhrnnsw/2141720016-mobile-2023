@@ -61,7 +61,9 @@ Stream<Color> getColors() async* {
 ```
 Kode tersebut menggunakan keyword yield* dalam Dart untuk membuat sebuah stream yang menghasilkan nilai berulang setiap detik. Fungsi generator menggunakan Stream.periodic untuk menciptakan stream dengan interval waktu satu detik, dan setiap kali dipanggil, mengembalikan nilai dari array colors berdasarkan indeks yang dihitung dengan memanfaatkan waktu atau iterasi stream. Dengan demikian, stream tersebut secara berurutan mengeluarkan warna-warna dari array colors setiap detiknya.
 
-**Soal 4:**
+**Soal 4:** Capture hasil praktikum Anda berupa GIF
+
+<img src = "img/praktikum1.gif">
 
 **Soal 5:**
 
