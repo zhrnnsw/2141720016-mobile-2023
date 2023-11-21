@@ -48,7 +48,18 @@ class ColorStream {
 }
 ```
 
-**Soal 3:**
+**Soal 3:** Jelaskan fungsi keyword yield* pada kode tersebut!
+Apa maksud isi perintah kode tersebut?
+```
+Stream<Color> getColors() async* {
+    yield* Stream.periodic(const Duration(seconds: 1), (int t) {
+      int index = t % colors.length;
+      return colors[index];
+    });
+  }
+
+```
+Kode tersebut menggunakan keyword yield* dalam Dart untuk membuat sebuah stream yang menghasilkan nilai berulang setiap detik. Fungsi generator menggunakan Stream.periodic untuk menciptakan stream dengan interval waktu satu detik, dan setiap kali dipanggil, mengembalikan nilai dari array colors berdasarkan indeks yang dihitung dengan memanfaatkan waktu atau iterasi stream. Dengan demikian, stream tersebut secara berurutan mengeluarkan warna-warna dari array colors setiap detiknya.
 
 **Soal 4:**
 
