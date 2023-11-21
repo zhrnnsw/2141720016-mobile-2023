@@ -65,7 +65,10 @@ Kode tersebut menggunakan keyword yield* dalam Dart untuk membuat sebuah stream 
 
 <img src = "img/praktikum1.gif">
 
-**Soal 5:**
+**Soal 5:** Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
+
+
+Perbedaan antara menggunakan await for dan listen terletak pada sifat blocking dan non-blocking dari keduanya dalam penanganan stream dalam Dart. Penggunaan await for membuat eksekusi metodenya bersifat blocking, di mana kode akan menunggu hingga nilai berikutnya tersedia dalam stream sebelum melanjutkan, sementara listen bersifat non-blocking, memungkinkan eksekusi kode untuk terus berjalan tanpa menunggu nilai stream, dan setiap nilai baru yang tersedia akan memicu pemanggilan fungsi yang diberikan sebagai argumen.
 
 ## **Praktikum 2: Streams Controllers dan Sinks**
 
