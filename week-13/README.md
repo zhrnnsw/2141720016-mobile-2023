@@ -142,6 +142,10 @@ Pada langkah 4, stream data diubah menjadi jenis broadcast dengan menambahkan .a
 
 **Soal 12:**
 
+ada Langkah 3, kode di file "stream.dart" mendefinisikan kelas NumberStream yang memiliki metode getNumbers(). Metode ini menggunakan Stream.periodic untuk membuat aliran data yang menghasilkan nilai acak setiap detik. Pada Langkah 7, dalam file "main.dart," menggunakan StreamBuilder untuk membangun antarmuka pengguna yang merespons perubahan pada aliran data numberStream. Jika terjadi error, dicetak pesan 'Error!'. Jika ada data pada snapshot, teks dengan nilai data tersebut ditampilkan di tengah layar dengan ukuran font 96. Jika tidak ada data, widget tetap mempertahankan tata letak tanpa konten yang terlihat. 
+
+<img src = "img/praktikum6.gif">
+
 ## **Praktikum 7: BLoC Pattern**
 
 **Soal 13:**
