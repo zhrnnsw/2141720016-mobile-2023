@@ -125,9 +125,18 @@ Langkah 2 memodifikasi metode initState dalam Flutter. Setelah mendapatkan alira
 
 ## **Praktikum 5: Multiple Stream Subscriptions**
 
-**Soal 10:**
+<img src = "img/image-1.png">
 
-**Soal 11:**
+**Soal 10:** Jelaskan mengapa error itu bisa terjadi ?
+
+Error "Bad state: Stream has already been listened to" terjadi karena pada Langkah 2, dua objek StreamSubscription (subscription dan subscription2) mencoba untuk mendengarkan aliran data (stream) yang sama. suatu aliran data hanya dapat didengarkan sekali pada satu waktu.
+
+**Soal 11:** Jelaskan mengapa hal itu bisa terjadi ?
+
+Pada langkah 4, stream data diubah menjadi jenis broadcast dengan menambahkan .asBroadcastStream(). Ini memungkinkan lebih dari satu StreamSubscription mendengarkan aliran data. Kemudian, pada langkah 2, dua StreamSubscription (subscription dan subscription2) dibuat untuk mendengarkan aliran data yang sama. Saat tombol 'New Random Number' ditekan, nilai acak ditambahkan ke dalam aliran data, dan karena aliran data adalah tipe broadcast, kedua StreamSubscription menerima nilai tersebut, menyebabkan teks angka pada tampilan bertambah dua kali
+
+<img src = "img/praktikum5.gif">
+
 
 ## **Praktikum 6: StreamBuilder**
 
