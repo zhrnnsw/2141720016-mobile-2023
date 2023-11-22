@@ -3,6 +3,7 @@
 **3H/29**
 
 **2141720016**
+
 ---
 
 # **Lanjutan State Management dengan Streams**
@@ -72,7 +73,30 @@ Perbedaan antara menggunakan await for dan listen terletak pada sifat blocking d
 
 ## **Praktikum 2: Streams Controllers dan Sinks**
 
-**Soal 6:**
+**Soal 6:** Jelaskan maksud kode langkah 8 dan 10 tersebut!
+```
+  @override
+  void initState(){
+    numberStream = NumberStream();
+    numberStreamController = numberStream.controller;
+    Stream stream = numberStreamController.stream;
+    stream.listen((event){
+      setState((){
+        lastNumber = event;
+      });
+    });
+    super.initState();
+  }
+
+  void addRandomNumber(){
+    Random random = Random();
+    int myNum = random.nextInt(10);
+    numberStream.addNumbertoSink(myNum);
+  }
+```
+Dalam langkah awal pembuatan widget, dibuat objek NumberStream dan StreamController, serta ditambahkan pendengar (listener) pada aliran data dari StreamController. Ketika nilai dalam aliran data mengalami perubahan, fungsi setState dipanggil untuk mengupdate nilai lastNumber, yang nantinya akan mengakibatkan perubahan pada tampilan. Fungsi addRandomNumber membuat angka acak dan menyuntikkannya ke dalam aliran data melalui numberStream.addNumbertoSink(myNum).
+
+<img src = "img/praktikum2.gif">
 
 **Soal 7:**
 
