@@ -108,13 +108,20 @@ Langkah 13 menambahkan fungsi addError ke dalam file "stream.dart", yang memungk
 
 **Soal 8:** Jelaskan maksud kode langkah 1-3 tersebut!
 
-Langkah 1 menambahkan variabel baru bernama transformer ke dalam kelas _StreamHomePageState di file "main.dart". Pada Langkah 2, dalam metode initState, kita membuat suatu perangkat yang disebut StreamTransformer. Ini seperti sebuah aturan yang memberitahu bagaimana mengolah angka dalam aliran data. Misalnya, aturan ini mengatakan, "kalikan angka masuk dengan 10, dan jika ada kesalahan, ganti nilainya dengan -1." Kemudian, pada Langkah 3, kita menggunakan aturan ini pada aliran data, sehingga setiap angka yang masuk akan dikalikan dengan 10 sebelum digunakan dalam tampilan. 
+Langkah 1 menambahkan variabel transformer ke dalam kelas _StreamHomePageState di file "main.dart". Langkah 2 menciptakan sebuah StreamTransformer dalam metode initState, yang mengatur transformasi data dalam aliran, mengalikan nilai input dengan 10, dan menangani error dengan mengirim nilai -1 ke dalam aliran. Pada langkah 3, metode transform diterapkan pada objek stream, memproses aliran data sesuai dengan transformasi yang telah ditentukan oleh transformer. Hasilnya diteruskan ke listener aliran data, di mana nilai tersebut digunakan untuk memperbarui lastNumber dalam setState.  
 
 <img src = "img/praktikum3.gif">
 
 ## **Praktikum 4: Subscribe ke Strean Events**
 
-**Soal 9:**
+**Soal 9:** Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+
+
+Langkah 2 memodifikasi metode initState dalam Flutter. Setelah mendapatkan aliran data dari numberStreamController, sebuah subscription dibuat untuk mendengarkan perubahan pada aliran tersebut. Jika terjadi perubahan, nilai lastNumber diperbarui, sedangkan jika terjadi error, nilai lastNumber diatur menjadi -1. Pada langkah ini juga, pesan 'OnDone was called' akan dicetak ketika aliran data selesai. Langkah 6, yang umumnya terdapat dalam metode dispose, menggunakan subscription.cancel() untuk memastikan bahwa langganan pada aliran data dihentikan ketika widget tidak lagi digunakan. Langkah 8 mengubah metode addRandomNumber, menambahkan pemeriksaan untuk memastikan bahwa angka acak hanya ditambahkan ke aliran data jika numberStreamController belum ditutup. Jika sudah ditutup, nilai lastNumber diatur menjadi -1. 
+
+<img src = "img/praktikum4.gif">
+
+<img src = "img/image.png">
 
 ## **Praktikum 5: Multiple Stream Subscriptions**
 
