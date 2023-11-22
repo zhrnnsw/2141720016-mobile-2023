@@ -142,10 +142,14 @@ Pada langkah 4, stream data diubah menjadi jenis broadcast dengan menambahkan .a
 
 **Soal 12:**
 
-ada Langkah 3, kode di file "stream.dart" mendefinisikan kelas NumberStream yang memiliki metode getNumbers(). Metode ini menggunakan Stream.periodic untuk membuat aliran data yang menghasilkan nilai acak setiap detik. Pada Langkah 7, dalam file "main.dart," menggunakan StreamBuilder untuk membangun antarmuka pengguna yang merespons perubahan pada aliran data numberStream. Jika terjadi error, dicetak pesan 'Error!'. Jika ada data pada snapshot, teks dengan nilai data tersebut ditampilkan di tengah layar dengan ukuran font 96. Jika tidak ada data, widget tetap mempertahankan tata letak tanpa konten yang terlihat. 
+ada Langkah 3, kode di file "stream.dart" mendefinisikan kelas NumberStream yang memiliki metode getNumbers(). MPetode ini menggunakan Stream.periodic untuk membuat aliran data yang menghasilkan nilai acak setiap detik. Pada Langkah 7, dalam file "main.dart," menggunakan StreamBuilder untuk membangun antarmuka pengguna yang merespons perubahan pada aliran data numberStream. Jika terjadi error, dicetak pesan 'Error!'. Jika ada data pada snapshot, teks dengan nilai data tersebut ditampilkan di tengah layar dengan ukuran font 96. Jika tidak ada data, widget tetap mempertahankan tata letak tanpa konten yang terlihat. 
 
 <img src = "img/praktikum6.gif">
 
 ## **Praktikum 7: BLoC Pattern**
 
-**Soal 13:**
+**Soal 13:** Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ? 
+
+Praktikum ini memperkenalkan konsep BLoC (Business Logic Component) pada Flutter dengan menerapkan pola arsitektur BLoC. Konsep BLoC terletak pada kelas RandomNUmberBloc yang bertindak sebagai komponen logika bisnis. Dalam implementasinya, dua StreamController digunakan untuk mengelola input dan output, yaitu _generateRandomController sebagai sink untuk menerima input dan _randomNumberController sebagai stream untuk mengirimkan output. Ketika tombol ditekan, generateRandom menerima input, dan melalui proses logika bisnis (pembuatan angka acak), hasilnya dikirimkan ke randomNumber untuk kemudian diteruskan ke antarmuka pengguna menggunakan StreamBuilder.
+
+<img src = "img/praktikum7.gif">
