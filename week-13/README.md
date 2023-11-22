@@ -98,7 +98,7 @@ Dalam langkah awal pembuatan widget, dibuat objek NumberStream dan StreamControl
 
 <img src = "img/praktikum2.gif">
 
-**Soal 7:**
+**Soal 7:** Jelaskan maksud kode langkah 13 sampai 15 
 
 <img src = "img/praktikum2_2.gif">
 
@@ -106,7 +106,11 @@ Langkah 13 menambahkan fungsi addError ke dalam file "stream.dart", yang memungk
 
 ## **Praktikum 3: Injeksi Data ke Streams**
 
-**Soal 8:**
+**Soal 8:** Jelaskan maksud kode langkah 1-3 tersebut!
+
+Langkah 1 menambahkan variabel baru bernama transformer ke dalam kelas _StreamHomePageState di file "main.dart". Pada Langkah 2, dalam metode initState, kita membuat suatu perangkat yang disebut StreamTransformer. Ini seperti sebuah aturan yang memberitahu bagaimana mengolah angka dalam aliran data. Misalnya, aturan ini mengatakan, "kalikan angka masuk dengan 10, dan jika ada kesalahan, ganti nilainya dengan -1." Kemudian, pada Langkah 3, kita menggunakan aturan ini pada aliran data, sehingga setiap angka yang masuk akan dikalikan dengan 10 sebelum digunakan dalam tampilan. 
+
+<img src = "img/praktikum3.gif">
 
 ## **Praktikum 4: Subscribe ke Strean Events**
 
