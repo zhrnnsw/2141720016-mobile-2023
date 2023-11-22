@@ -100,6 +100,10 @@ Dalam langkah awal pembuatan widget, dibuat objek NumberStream dan StreamControl
 
 **Soal 7:**
 
+<img src = "img/praktikum2_2.gif">
+
+Langkah 13 menambahkan fungsi addError ke dalam file "stream.dart", yang memungkinkan penambahan error ke dalam sink dari StreamController. Langkah 14 memperluas implementasi pendengar aliran data di file "main.dart" dengan menambahkan fungsi onError. Jika terjadi error dalam aliran data, nilai lastNumber akan diperbarui menjadi -1. Langkah 15 mengubah implementasi fungsi addRandomNumber di file "main.dart" dengan menonaktifkan pembuatan angka acak dan menggantinya dengan pemanggilan fungsi addError. Hal ini memberikan kemampuan untuk mensimulasikan dan menangani situasi error dalam aliran data dengan mengubah nilai lastNumber menjadi -1.
+
 ## **Praktikum 3: Injeksi Data ke Streams**
 
 **Soal 8:**
